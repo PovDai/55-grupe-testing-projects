@@ -28,13 +28,45 @@ app.use(userData);
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World! Server is running on localhost:5559')
 })
 
 app.post('/api/register', isPublic, postPublicRegister);
 app.post('/api/login', isPublic, postPublicLogin);
 
 app.get('/api/login', isAdmin, getLogin);
+
+const API_KEY = process.env.ALPHA_VANTAGE_KEY; 
+
+
+app.get('/api/stock/:symbol', async (req, res) => {
+  const symbol = req.params.symbol.toUpperCase();
+  const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${API_KEY}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: 'Nepavyko gauti duomenų' });
+  }
+});
+
+app.get('/api/advice', async (req, res) => {
+  try {
+    const response = await fetch('https://api.adviceslip.com/advice');
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Nepavyko gauti patarimo' });
+  }
+});
+
+
+
+
+
 
 
 app.use((err, req, res, next) => {

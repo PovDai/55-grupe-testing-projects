@@ -10,6 +10,8 @@ import { AdminLayout } from './templates/AdminLayout'
 import { NotFoundPage } from './pages/public/NotFound'
 import { UserContextWrapper } from './context/user/UserContextWrapper'
 import { AdminDasboardPage } from './pages/admin/Dashboard'
+import { StockTracker } from './pages/admin/stocks/StockMarket'
+import { AdvicePage } from './pages/admin/advice/AdvicePage'
 
  export function App() {
  
@@ -27,7 +29,9 @@ import { AdminDasboardPage } from './pages/admin/Dashboard'
               </Route>
 
               <Route element={<AdminLayout />}>
-                <Route path='/admin' element={<AdminDasboardPage />} />
+           <Route path='/admin' element={<AdminDasboardPage />} />
+           <Route path="/admin/stocks/" element={<StockTracker />} />
+            <Route path='/admin/advice' element={<AdvicePage />} />
 
               
               </Route>

@@ -73,34 +73,36 @@ export function LoginForm() {
                     {/* Username/Email laukelis */}
                     <div className="mb-4">
                         <label htmlFor="username_or_email" className="form-label">Login name or email</label>
-                        <input
-                            onChange={e => setUserNameOrEmail(e.target.value)}
-                            value={usernameOrEmail}
-                            id="username_or_email"
-                            type="text"
-                            className={"form-control" + (usernameOrEmailErr ? ' is-invalid' : '')}
-                            required
-                        />
+<input
+  onChange={e => setUserNameOrEmail(e.target.value)}
+  value={usernameOrEmail}
+  id="username_or_email"
+  type="text"
+  className={"form-control input-dark" + (usernameOrEmailErr ? ' is-invalid' : '')}
+  placeholder="Enter username or email"
+  required
+/>
                         <div className="invalid-feedback">{usernameOrEmailErr}</div>
                     </div>
 
                     {/* Password laukelis */}
                     <div className="mb-4">
                         <label htmlFor="password" className="form-label">Password</label>
-                        <input
-                            onChange={e => setPassword(e.target.value)}
-                            value={password}
-                            id="password"
-                            type="password"
-                            className={"form-control" + (passwordErr ? ' is-invalid' : '')}
-                            required
-                        />
+<input
+  onChange={e => setPassword(e.target.value)}
+  value={password}
+  id="password"
+  type="password"
+  className={"form-control input-dark" + (passwordErr ? ' is-invalid' : '')}
+  placeholder="Enter password"
+  required
+/>
                         <div className="invalid-feedback">{passwordErr}</div>
                     </div>
 
                     {/* Login mygtukas */}
                     <div className="mb-4">
-                        <button type="submit" className="btn btn-primary w-100 py-2 fs-5">Login</button>
+                        <button type="submit" className="btn btn-warning w-100 py-2 fs-5">Login</button>
                     </div>
                 </form>
             </div>

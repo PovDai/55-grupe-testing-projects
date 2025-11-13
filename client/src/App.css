@@ -2,3 +2,119 @@
     min-height: 100vh;
     
 }
+body {
+  background-image: url('../../client/src/assets/testing.webp');
+  background-size: cover;        /* kad paveikslėlis užpildytų visą ekraną */
+  background-position: center;   /* centruoja paveikslėlį */
+  background-repeat: no-repeat;  /* nebekartoja paveikslėlio */
+  background-attachment: fixed;  /* (pasirinktinai) kad būtų fiksuotas scrolinant */
+  color: gold;
+}
+.golden{
+    color: gold;
+}
+.transparent-img {
+  opacity: 0.5;            /* 0 = visiškai skaidrus, 1 = visiškai nepermatomas */
+  transition: opacity .25s ease;
+  border-radius: 1rem;
+}
+.bigger{
+    font-size: 8rem;
+
+}
+.sidebar_back{
+   background-color: #222; /* tamsus fonas */
+  color: gold; /* jei nori, kad tekstas būtų auksinis */
+}
+.input-dark {
+  background-color: #000 !important; /* juodas fonas */
+  color: #FFD700 !important;        /* geltonas įvedamas tekstas */
+  border: 1px solid #FFD700 !important; /* kraštinė geltona */
+}
+
+/* Placeholder tekstas */
+.input-dark::placeholder {
+  color: #FFD700 !important; /* geltonas placeholder */
+  opacity: 1 !important;     /* ryškumas */
+}
+
+/* Jei naudojamas autofill (Chrome) */
+.input-dark:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset !important;
+  -webkit-text-fill-color: #FFD700 !important;
+}
+
+.stock-container {
+  background-color: #000;      /* juodas fonas */
+  color: #FFD700;              /* auksinis / geltonas tekstas */
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+}
+
+.ticker-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background-color: #111;
+  color: #FFD700;
+  border: 1px solid #FFD700;
+  border-radius: 4px;
+}
+
+.ticker-input::placeholder {
+  color: #FFD700;
+  opacity: 0.7;
+}
+
+.stock-card {
+  background-color: #111;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.details p {
+  margin: 0.25rem 0;
+}
+
+.positive {
+  color: #00ff00;
+}
+
+.negative {
+  color: #ff4d4d;
+}
+
+.loading, .error {
+  margin-top: 1rem;
+}
+
+.advice-container {
+  background-color: #000;       /* juodas fonas */
+  color: #FFD700;               /* geltonas tekstas */
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;           /* centras horizontaliai */
+  font-family: Arial, sans-serif;
+}
+
+.advice-text {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+}
