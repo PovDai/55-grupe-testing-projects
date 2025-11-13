@@ -27,15 +27,11 @@ export function Sidebar() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link d-flex align-items-center gap-2 golden " to="/admin/movies/published">
-                                Published movies
+                            <Link className="nav-link d-flex align-items-center gap-2 golden " to="/admin/weather">
+                                Weather
                             </Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link d-flex align-items-center gap-2 golden " to="/admin/movies/draft">
-                                Draft movies
-                            </Link>
-                        </li>
+                       
                     </ul>
                 
                 </div>
