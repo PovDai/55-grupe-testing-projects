@@ -13,6 +13,7 @@ import { AdminDasboardPage } from './pages/admin/Dashboard'
 import { StockTracker } from './pages/admin/stocks/StockMarket'
 import { AdvicePage } from './pages/admin/advice/AdvicePage'
 import { Weather } from './pages/admin/weather/Weather'
+import { Calculator } from './components/Calculator'
 
  export function App() {
  
@@ -33,7 +34,8 @@ import { Weather } from './pages/admin/weather/Weather'
            <Route path='/admin' element={<AdminDasboardPage />} />
            <Route path="/admin/stocks/" element={<StockTracker />} />
            <Route path='/admin/advice' element={<AdvicePage />} />
-            <Route path='/admin/weather' element={<Weather />} />
+           <Route path='/admin/weather' element={<Weather />} />
+           <Route path='/admin/calculator' element={<Calculator/>}/>
 
               
               </Route>

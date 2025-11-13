@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 export function StockTracker() {
   const [symbol, setSymbol] = useState('TSLA');
   const [data, setData] = useState(null);
@@ -77,8 +78,10 @@ export function StockTracker() {
             <p>Volume: {data.volume.toLocaleString()}</p>
             <p>Last Trading Day: {data.latestDay}</p>
           </div>
+          
         </div>
       )}
     </div>
+
   )
 }

@@ -31,6 +31,11 @@ export function Sidebar() {
                                 Weather
                             </Link>
                         </li>
+                         <li className="nav-item">
+                            <Link className="nav-link d-flex align-items-center gap-2 golden " to="/admin/calculator">
+                                Calculator
+                            </Link>
+                        </li>
                        
                     </ul>
                 

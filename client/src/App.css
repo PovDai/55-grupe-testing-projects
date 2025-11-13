@@ -171,3 +171,69 @@ body {
   border-top-color: #FFD700;
   border-right-color: #FFD700;
 }
+
+.calculator-wrapper {
+  max-width: 350px; /* sumažintas plotis */
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.calculator-title {
+  text-align: center;
+  color: #FFD700; /* geltona */
+  margin-bottom: 1rem;
+}
+
+/* Pagrindinė kortelė */
+.calculator-card {
+  background-color: #000; /* juodas fonas */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Input laukas */
+.calculator-input {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  text-align: right;
+  background-color: #111; /* tamsesnis fonas input */
+  color: #FFD700; /* geltonas tekstas */
+  border: 1px solid #FFD700;
+  border-radius: 0.25rem;
+}
+
+/* Mygtukai */
+.calculator-btn {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  background-color: #111;
+  color: #FFD700;
+  border: 1px solid #FFD700;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+
+.calculator-btn:hover {
+  background-color: #FFD700;
+  color: #000;
+}
+
+.equals-btn {
+  background-color: #FFD700;
+  color: #000;
+  border-color: #FFD700;
+}
+
+.clear-btn {
+  background-color: #FF4500;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+.clear-btn:hover {
+  background-color: #FF6347;
+}
