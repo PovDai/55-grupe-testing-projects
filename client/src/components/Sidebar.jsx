@@ -46,6 +46,11 @@ export function Sidebar() {
                                 Matrix Room 
                             </Link>
                         </li>
+                         <li className="nav-item">
+                            <Link className="nav-link d-flex align-items-center gap-2 golden " to="/admin/countries">
+                                Countries API 
+                            </Link>
+                        </li>
                        
                     </ul>
                 

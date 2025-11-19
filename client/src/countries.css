@@ -1,0 +1,27 @@
+.card-title {
+  font-size: 1.1rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+/* Kortelių stiliai */
+.country-card {
+  height: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.country-flag {
+  height: 150px;
+  object-fit: cover;
+}
+
+.no-flag {
+  height: 150px;
+  background-color: #6c757d; /* Bootstrap bg-secondary */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

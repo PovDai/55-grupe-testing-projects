@@ -38,6 +38,8 @@ app.get('/api/login', isAdmin, getLogin);
 
 const API_KEY = process.env.ALPHA_VANTAGE_KEY; 
 
+const APICOUNTRIES_KEY = process.env.APICOUNTRIES_KEY;
+
 
 app.get('/api/stock/:symbol', async (req, res) => {
   const symbol = req.params.symbol.toUpperCase();
@@ -62,6 +64,39 @@ app.get('/api/advice', async (req, res) => {
     res.status(500).json({ error: 'Nepavyko gauti patarimo' });
   }
 });
+
+app.get('/api/countries', async (req, res) => {
+  const { name } = req.query;
+  try {
+    const url = `https://www.apicountries.com/countries?apikey=${APICOUNTRIES_KEY}`;
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`APICountries error: ${text}`);
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data)) {
+      throw new Error('APICountries negrąžino masyvo');
+    }
+
+    let filtered = data;
+    if (name) {
+      const search = name.toLowerCase();
+      filtered = data.filter(country =>
+        country.name?.toLowerCase().includes(search)
+      );
+    }
+
+    res.json(filtered);
+  } catch (error) {
+    console.error('Backend /api/countries error:', error.message);
+    res.status(500).json({ error: 'Nepavyko gauti šalių duomenų', details: error.message });
+  }
+});
+
 
 
 

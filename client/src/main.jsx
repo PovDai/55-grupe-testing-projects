@@ -4,6 +4,7 @@ import './bootstrap.min.css';
 import './App.css';
 import './checkers.css';
 import './matrix.css';
+import './countries.css';
 import { App } from './App'
 
 createRoot(document.getElementById('root')).render(
