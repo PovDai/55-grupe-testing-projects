@@ -36,6 +36,11 @@ export function Sidebar() {
                                 Calculator
                             </Link>
                         </li>
+                         <li className="nav-item">
+                            <Link className="nav-link d-flex align-items-center gap-2 golden " to="/admin/checkers">
+                                Checkers
+                            </Link>
+                        </li>
                        
                     </ul>
                 

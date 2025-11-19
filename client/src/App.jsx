@@ -14,6 +14,7 @@ import { StockTracker } from './pages/admin/stocks/StockMarket'
 import { AdvicePage } from './pages/admin/advice/AdvicePage'
 import { Weather } from './pages/admin/weather/Weather'
 import { Calculator } from './components/Calculator'
+import { Checkers } from './components/checkers/Checkers'
 
  export function App() {
  
@@ -35,7 +36,8 @@ import { Calculator } from './components/Calculator'
            <Route path="/admin/stocks/" element={<StockTracker />} />
            <Route path='/admin/advice' element={<AdvicePage />} />
            <Route path='/admin/weather' element={<Weather />} />
-           <Route path='/admin/calculator' element={<Calculator/>}/>
+           <Route path='/admin/calculator' element={<Calculator />} />
+           <Route path='/admin/checkers' element={<Checkers/>}/>
 
               
               </Route>
