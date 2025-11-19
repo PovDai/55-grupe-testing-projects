@@ -15,6 +15,7 @@ import { AdvicePage } from './pages/admin/advice/AdvicePage'
 import { Weather } from './pages/admin/weather/Weather'
 import { Calculator } from './components/Calculator'
 import { Checkers } from './components/checkers/Checkers'
+import { Matrix } from './components/matrix/Matrix'
 
  export function App() {
  
@@ -37,7 +38,8 @@ import { Checkers } from './components/checkers/Checkers'
            <Route path='/admin/advice' element={<AdvicePage />} />
            <Route path='/admin/weather' element={<Weather />} />
            <Route path='/admin/calculator' element={<Calculator />} />
-           <Route path='/admin/checkers' element={<Checkers/>}/>
+           <Route path='/admin/checkers' element={<Checkers />} />
+           <Route path='/admin/matrix' element={<Matrix/>}/>
 
               
               </Route>
