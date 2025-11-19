@@ -39,6 +39,7 @@ app.get('/api/login', isAdmin, getLogin);
 const API_KEY = process.env.ALPHA_VANTAGE_KEY; 
 
 const APICOUNTRIES_KEY = process.env.APICOUNTRIES_KEY;
+const APOD_KEY = process.env.APOD_KEY;
 
 
 app.get('/api/stock/:symbol', async (req, res) => {
@@ -94,6 +95,26 @@ app.get('/api/countries', async (req, res) => {
   } catch (error) {
     console.error('Backend /api/countries error:', error.message);
     res.status(500).json({ error: 'Nepavyko gauti šalių duomenų', details: error.message });
+  }
+});
+
+
+app.get('/api/apod', async (req, res) => {
+  const { date } = req.query; // optional
+  try {
+    const url = `https://api.nasa.gov/planetary/apod?api_key=${APOD_KEY}${date ? `&date=${date}` : ''}`;
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`NASA API error: ${text}`);
+    }
+
+    const data = await response.json();
+    res.json(data);
+  } catch (err) {
+    console.error('Backend error:', err.message);
+    res.status(500).json({ error: 'Nepavyko gauti duomenų iš NASA', details: err.message });
   }
 });
 

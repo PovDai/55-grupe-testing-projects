@@ -1,5 +1,5 @@
 import React from 'react';
-import './Countries.css';
+
 
 export default function CountryCard({ country }) {
   return (

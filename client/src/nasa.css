@@ -1,0 +1,46 @@
+/* Kortelė */
+.nasa-card {
+  width: 50%;              /* kortelė užims pusę ekrano pločio */
+  margin: 2rem auto;       /* centrinė kortelė su viršutiniu tarpu */
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  overflow: hidden;
+}
+
+/* Nuotrauka */
+.nasa-image {
+  width: 100%;             /* užpildo kortelės plotį */
+  height: auto;            /* aukštis prisitaiko pagal proporcijas */
+  display: block;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  object-fit: contain;     /* nuotrauka tilps, neiškraipoma */
+}
+
+/* Video */
+.nasa-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;      /* proporcingas video */
+  border-radius: 0.25rem;
+}
+
+/* Kortelės tekstas */
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.btn-outline-primary {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+}

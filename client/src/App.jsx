@@ -15,8 +15,8 @@ import { AdvicePage } from './pages/admin/advice/AdvicePage'
 import { Weather } from './pages/admin/weather/Weather'
 import { Calculator } from './components/Calculator'
 import { Checkers } from './components/checkers/Checkers'
-import { Matrix } from './components/matrix/Matrix'
 import { Countries } from './components/countries/Countries'
+import { Nasa } from './components/nasa/Nasa'
 
  export function App() {
  
@@ -40,8 +40,9 @@ import { Countries } from './components/countries/Countries'
            <Route path='/admin/weather' element={<Weather />} />
            <Route path='/admin/calculator' element={<Calculator />} />
            <Route path='/admin/checkers' element={<Checkers />} />
-           <Route path='/admin/matrix' element={<Matrix />} />
-           <Route path='/admin/countries' element={<Countries/>}/>
+          
+           <Route path='/admin/countries' element={<Countries />} />
+           <Route path='/admin/apod' element={<Nasa/>}/>
 
               
               </Route>
