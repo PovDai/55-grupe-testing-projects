@@ -17,6 +17,7 @@ import { Calculator } from './components/Calculator'
 import { Checkers } from './components/checkers/Checkers'
 import { Countries } from './components/countries/Countries'
 import { Nasa } from './components/nasa/Nasa'
+import { Hangman } from './components/hangman/Hangman'
 
  export function App() {
  
@@ -40,7 +41,7 @@ import { Nasa } from './components/nasa/Nasa'
            <Route path='/admin/weather' element={<Weather />} />
            <Route path='/admin/calculator' element={<Calculator />} />
            <Route path='/admin/checkers' element={<Checkers />} />
-          
+           <Route path='/admin/hangman' element={<Hangman />}/>
            <Route path='/admin/countries' element={<Countries />} />
            <Route path='/admin/apod' element={<Nasa/>}/>
 
