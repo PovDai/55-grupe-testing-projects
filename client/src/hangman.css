@@ -1,8 +1,22 @@
-.hangman-container {
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #000; /* visas fonas juodas */
+}
+
+.hangman-game {
+  min-height: 100vh;
+  background-color: #000; /* visas fonas juodas */
+}
+
+.hangman-frame {
   position: relative;
-  width: 150px;
+  width: 200px;
   height: 250px;
   margin: 0 auto 20px;
+  border: 4px solid #ffc107; /* Bootstrap warning rėmelis */
+  border-radius: 8px;
+  background-color: #000;
 }
 
 /* Stovas */
@@ -12,7 +26,7 @@
   left: 20px;
   width: 100px;
   height: 10px;
-  background-color: gold;
+  background-color: #ffc107; /* geltona */
 }
 
 .gallows::before {
@@ -22,7 +36,7 @@
   left: 30px;
   width: 10px;
   height: 180px;
-  background-color: gold;
+  background-color: #ffc107;
 }
 
 .gallows::after {
@@ -32,86 +46,81 @@
   left: 30px;
   width: 60px;
   height: 10px;
-  background-color: gold;
+  background-color: #ffc107;
 }
 
-/* Galva */
-.head {
+/* Žmogeliuko dalys */
+.head, .body, .left-arm, .right-arm, .left-leg, .right-leg {
   position: absolute;
-  top: 30px;
-  left: 80px;
-  width: 30px;
-  height: 30px;
-  border: 4px solid gold;
-  border-radius: 50%;
   display: none;
 }
 
 .head.show {
   display: block;
-}
-
-/* Kūnas */
-.body {
-  position: absolute;
-  top: 60px;
-  left: 92px;
-  width: 4px;
-  height: 60px;
-  background-color: gold;
-  display: none;
+  top: 30px;
+  left: 80px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 .body.show {
   display: block;
-}
-
-/* Rankos */
-.left-arm, .right-arm {
-  position: absolute;
-  top: 70px;
+  top: 60px;
+  left: 92px;
   width: 4px;
-  height: 40px;
-  background-color: gold;
-  transform-origin: top center;
-  display: none;
-}
-
-.left-arm {
-  left: 92px;
-  transform: rotate(-45deg);
-}
-
-.right-arm {
-  left: 92px;
-  transform: rotate(45deg);
+  height: 60px;
 }
 
 .left-arm.show, .right-arm.show {
   display: block;
-}
-
-/* Kojos */
-.left-leg, .right-leg {
-  position: absolute;
-  top: 120px;
+  top: 70px;
   width: 4px;
-  height: 50px;
-  background-color:gold;
+  height: 40px;
   transform-origin: top center;
-  display: none;
 }
 
-.left-leg {
+.left-arm.show {
   left: 92px;
-  transform: rotate(-30deg);
+  transform: rotate(-45deg);
 }
 
-.right-leg {
+.right-arm.show {
   left: 92px;
-  transform: rotate(30deg);
+  transform: rotate(45deg);
 }
 
 .left-leg.show, .right-leg.show {
   display: block;
+  top: 120px;
+  width: 4px;
+  height: 50px;
+  transform-origin: top center;
+}
+
+.left-leg.show {
+  left: 92px;
+  transform: rotate(-30deg);
+}
+
+.right-leg.show {
+  left: 92px;
+  transform: rotate(30deg);
+}
+
+/* Raidės */
+.letter {
+  font-weight: bold;
+}
+
+/* Mygtukai */
+.btn-letter {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+  margin: 2px;
+}
+
+.btn-letter:disabled {
+  opacity: 0.5;
 }

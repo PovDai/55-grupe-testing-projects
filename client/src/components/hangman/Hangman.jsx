@@ -19,7 +19,7 @@ export function Hangman() {
 
   const renderWord = () =>
     word.split("").map((letter, index) => (
-      <span key={index} className="mx-1 display-6">
+      <span key={index} className="mx-1 display-6 text-warning">
         {guessedLetters.includes(letter) ? letter : "_"}
       </span>
     ));
@@ -48,30 +48,29 @@ export function Hangman() {
   const isWinner = word.split("").every((letter) => guessedLetters.includes(letter));
 
   return (
-    <div className="container text-center mt-5">
-      <h1 className="mb-4">Hangman Žaidimas</h1>
+    <div className="hangman-game text-center p-4">
+      <h1 className="text-warning mb-4">Hangman Žaidimas</h1>
 
-      <div className="hangman-container mb-3">
+      <div className="hangman-frame mb-3">
         <div className={`gallows`}></div>
-        <div className={`head ${wrongGuesses > 0 ? "show" : ""}`}></div>
-        <div className={`body ${wrongGuesses > 1 ? "show" : ""}`}></div>
-        <div className={`left-arm ${wrongGuesses > 2 ? "show" : ""}`}></div>
-        <div className={`right-arm ${wrongGuesses > 3 ? "show" : ""}`}></div>
-        <div className={`left-leg ${wrongGuesses > 4 ? "show" : ""}`}></div>
-        <div className={`right-leg ${wrongGuesses > 5 ? "show" : ""}`}></div>
+        <div className={`head ${wrongGuesses > 0 ? "show" : ""} bg-warning`}></div>
+        <div className={`body ${wrongGuesses > 1 ? "show" : ""} bg-warning`}></div>
+        <div className={`left-arm ${wrongGuesses > 2 ? "show" : ""} bg-warning`}></div>
+        <div className={`right-arm ${wrongGuesses > 3 ? "show" : ""} bg-warning`}></div>
+        <div className={`left-leg ${wrongGuesses > 4 ? "show" : ""} bg-warning`}></div>
+        <div className={`right-leg ${wrongGuesses > 5 ? "show" : ""} bg-warning`}></div>
       </div>
 
-      <div className="mb-3">{renderWord()}</div>
-      <div className="mb-3">{renderAlphabetButtons()}</div>
-      <div className="mb-3">
-        <p>Klaidos: {wrongGuesses} / {maxWrong}</p>
-      </div>
+      <div className="word mb-3">{renderWord()}</div>
+      <div className="alphabet mb-3">{renderAlphabetButtons()}</div>
 
-      {isGameOver && <h3 className="text-danger">Pralaimėjai! Žodis buvo: {word}</h3>}
-      {isWinner && <h3 className="text-success">Laimėjai! 🎉</h3>}
+      <div className="status mb-3">
+        {isGameOver && <p className="text-danger">Pralaimėjai! Žodis buvo: {word}</p>}
+        {isWinner && <p className="text-success">Laimėjai! 🎉</p>}
+      </div>
 
       {(isGameOver || isWinner) && (
-        <button className="btn btn-success mt-3" onClick={resetGame}>
+        <button className="btn btn-success" onClick={resetGame}>
           Pradėti iš naujo
         </button>
       )}
