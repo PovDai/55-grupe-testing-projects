@@ -1,0 +1,80 @@
+.reaction-game-container {
+text-align: center;
+padding: 10px;
+max-width: 400px;
+margin: 0 auto;
+font-family: Arial, sans-serif;
+}
+
+.buttons-container {
+margin: 10px 0;
+}
+
+.game-button {
+margin: 5px;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+background-color: #007BFF;
+color: white;
+transition: background-color 0.3s;
+}
+
+.game-button:hover {
+background-color: #0056b3;
+}
+
+.game-over {
+margin-top: 20px;
+font-size: 24px;
+font-weight: bold;
+color: red;
+animation: flash 1s infinite;
+}
+
+@keyframes flash {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+.game-area {
+width: 100%;
+max-width: 320px;
+height: 420px;
+background: #ddd;
+border-radius: 10px;
+margin: 20px auto;
+position: relative;
+overflow: hidden;
+}
+
+.target {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: red;
+position: absolute;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+.game-area {
+width: 90%;
+height: 300px;
+}
+
+.target {
+width: 30px;
+height: 30px;
+}
+
+.game-button {
+padding: 8px 16px;
+font-size: 14px;
+}
+}

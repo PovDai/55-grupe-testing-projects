@@ -18,6 +18,7 @@ import { Checkers } from './components/checkers/Checkers'
 import { Countries } from './components/countries/Countries'
 import { Nasa } from './components/nasa/Nasa'
 import { Hangman } from './components/hangman/Hangman'
+import { ReactionGame } from './components/reaction/Reaction'
 
  export function App() {
  
@@ -43,7 +44,8 @@ import { Hangman } from './components/hangman/Hangman'
            <Route path='/admin/checkers' element={<Checkers />} />
            <Route path='/admin/hangman' element={<Hangman />}/>
            <Route path='/admin/countries' element={<Countries />} />
-           <Route path='/admin/apod' element={<Nasa/>}/>
+           <Route path='/admin/apod' element={<Nasa />} />
+           <Route path='/admin/reaction' element={<ReactionGame />}/>
 
               
               </Route>

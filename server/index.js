@@ -125,6 +125,8 @@ app.get('/api/apod', async (req, res) => {
 
 
 
+
+
 app.use((err, req, res, next) => {
     console.log(err);
     return res.status(500).send('Server error');

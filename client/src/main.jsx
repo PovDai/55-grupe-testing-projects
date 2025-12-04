@@ -5,6 +5,7 @@ import './App.css';
 import './checkers.css';
 import './countries.css';
 import './hangman.css';
+import './reaction.css';
 import { App } from './App'
 
 createRoot(document.getElementById('root')).render(

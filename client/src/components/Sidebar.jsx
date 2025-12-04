@@ -57,6 +57,11 @@ export function Sidebar() {
                                 Hangman game 
                             </Link>
                         </li>
+                         <li className="nav-item">
+                            <Link className="nav-link d-flex align-items-center gap-2 golden " to="/admin/reaction">
+                                Reaction game
+                            </Link>
+                        </li>
                        
                     </ul>
                 
